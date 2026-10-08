@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Scriptly AI</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Background effects -->
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="logo">
+        <span class="logo-icon">✦</span>
+        Scriptly<span>AI</span>
+      </div>
+
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </div>
+
+      <div class="nav-buttons">
+        <button
+          class="login-btn"
+          onclick="document.getElementById('authModal').style.display='flex'"
+        >
+          Log in
+        </button>
+        <button
+          class="signup-btn"
+          onclick="document.getElementById('authModal').style.display='none'; document.getElementById('signupModal').style.display='flex'"
+        >
+          Get Started
+        </button>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <main class="hero">
+      <div class="hero-content">
+        <div class="badge">
+          <span class="pulse"></span>
+          AI-powered script creation
+        </div>
+
+        <h1>
+          Turn Your Ideas Into
+          <span>Viral Scripts.</span>
+        </h1>
+
+        <p>
+          Create engaging scripts for TikTok, Reels and YouTube Shorts in
+          seconds. Your next viral idea starts here.
+        </p>
+
+        <div class="hero-buttons">
+          <button class="primary-btn">
+            Create Your Script
+            <span>→</span>
+          </button>
+
+          <button class="secondary-btn">See How It Works</button>
+        </div>
+
+        <div class="trust">
+          <div class="avatars">
+            <span>👨🏻</span>
+            <span>👩🏻</span>
+            <span>👨🏽</span>
+            <span>👩🏽</span>
+          </div>
+
+          <div>
+            <strong>10,000+</strong>
+            <small>creators creating better content</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI CORE -->
+      <div class="hero-visual">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+
+        <div class="ai-core">
+          <div class="core-ring">
+            <div class="core-center">✦</div>
+          </div>
+
+          <div class="floating-card card-one">
+            <span>⚡</span>
+            Viral Ideas
+          </div>
+
+          <div class="floating-card card-two">
+            <span>✦</span>
+            Smart Scripts
+          </div>
+
+          <div class="floating-card card-three">
+            <span>▶</span>
+            More Views
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- SCRIPT GENERATOR -->
+
+    <section class="generator-section" id="generator">
+      <div class="section-heading">
+        <div class="section-badge">✦ SCRIPT GENERATOR</div>
+
+        <h2>Create Your Next <span>Viral Script</span></h2>
+
+        <p>
+          Tell us your idea and turn it into an engaging short-form video
+          script.
+        </p>
+      </div>
+
+      <div class="generator-box">
+        <div class="generator-form">
+          <label>What's your video about?</label>
+
+          <textarea
+            id="topicInput"
+            placeholder="Example: 5 habits that will change your life..."
+          ></textarea>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Platform</label>
+
+              <select id="platform">
+                <option>TikTok</option>
+                <option>Instagram Reels</option>
+                <option>YouTube Shorts</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Script Tone</label>
+
+              <select id="tone">
+                <option>Engaging</option>
+                <option>Funny</option>
+                <option>Professional</option>
+                <option>Inspirational</option>
+                <option>Storytelling</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Target Audience</label>
+
+              <select id="audience">
+                <option value="General Audience">General Audience</option>
+                <option value="Students">Students</option>
+                <option value="Beginners">Beginners</option>
+                <option value="Entrepreneurs">Entrepreneurs</option>
+                <option value="Content Creators">Content Creators</option>
+                <option value="Professionals">Professionals</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Hook Style</label>
+
+              <select id="hookStyle">
+                <option value="Curiosity">Curiosity</option>
+                <option value="Shocking">Shocking</option>
+                <option value="Question">Question</option>
+                <option value="Story">Story</option>
+                <option value="Educational">Educational</option>
+                <option value="Bold Statement">Bold Statement</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Voice / Delivery</label>
+
+              <select id="voiceStyle">
+                <option value="Energetic">Energetic</option>
+                <option value="Calm">Calm</option>
+                <option value="Storyteller">Storyteller</option>
+                <option value="Confident">Confident</option>
+                <option value="Friendly">Friendly</option>
+                <option value="Professional">Professional</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Script Language</label>
+
+              <select id="language">
+                <option value="English">English</option>
+                <option value="Urdu">Urdu</option>
+                <option value="Roman Urdu">Roman Urdu</option>
+                <option value="Hindi">Hindi</option>
+                <option value="Arabic">Arabic</option>
+              </select>
+            </div>
+            <!-- SCRIPT DURATION -->
+            <div class="form-group duration-group">
+              <label>Script Duration</label>
+
+              <select id="duration">
+                <option value="15">15 sec</option>
+                <option value="30">30 sec</option>
+                <option value="45">45 sec</option>
+                <option value="60">60 sec</option>
+                <option value="90">90 sec</option>
+                <option value="120">120 sec</option>
+                <option value="180">3 min</option>
+                <option value="300">5 min</option>
+                <option value="600">10 min</option>
+                <option value="1200">20 min</option>
+                <option value="custom">Custom</option>
+              </select>
+
+              <input
+                type="number"
+                id="customDuration"
+                placeholder="Enter seconds"
+                min="1"
+              />
+            </div>
+          </div>
+
+          <button class="generate-btn" id="generateBtn">
+            <span>✦</span>
+            Generate Script
+            <span>→</span>
+          </button>
+        </div>
+
+        <div class="script-result" id="scriptResult">
+          <div class="result-header">
+            <div>
+              <small>GENERATED SCRIPT</small>
+              <h3>Your script will appear here</h3>
+            </div>
+
+            <button class="copy-btn" id="copyBtn">Copy</button>
+            <div class="result-actions">
+              <button id="downloadBtn">Download Script</button>
+              <button id="regenerateBtn">Regenerate</button>
+            </div>
+          </div>
+
+          <div class="result-content" id="resultContent">
+            <div class="empty-result">
+              <div class="empty-icon">✦</div>
+
+              <h4>Ready when you are</h4>
+
+              <p>
+                Enter your topic and click Generate Script to create your first
+                script.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pricing-section" id="pricing">
+      <!-- TITLE & HASHTAG GENERATOR -->
+      <section class="tools-section" id="tools">
+        <div class="tools-header">
+          <span>CREATOR TOOLS</span>
+          <h2>Make Your Content More Viral</h2>
+          <p>Generate catchy titles and powerful hashtags for your videos.</p>
+        </div>
+
+        <div class="tools-grid">
+          <div class="tool-card">
+            <h3>🎯 Title Generator</h3>
+            <p>Generate catchy titles for your content.</p>
+
+            <input
+              type="text"
+              id="titleTopic"
+              placeholder="Enter your video topic..."
+            />
+
+            <button id="generateTitleBtn">Generate Titles</button>
+
+            <div id="titleResult" class="tool-result">
+              Your titles will appear here.
+            </div>
+          </div>
+
+          <div class="tool-card">
+            <h3># Hashtag Generator</h3>
+            <p>Find relevant hashtags for your video.</p>
+
+            <input
+              type="text"
+              id="hashtagTopic"
+              placeholder="Enter your topic..."
+            />
+
+            <button id="generateHashtagBtn">Generate Hashtags</button>
+
+            <div id="hashtagResult" class="tool-result">
+              Your hashtags will appear here.
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="pricing-header">
+        <span>PRICING</span>
+        <h2>Choose Your Plan</h2>
+        <p>Start free. Upgrade when you need more power.</p>
+      </div>
+
+      <div class="pricing-cards">
+        <div class="pricing-card">
+          <h3>Free</h3>
+          <div class="price">$0<span>/month</span></div>
+
+          <ul>
+            <li>✓ 10 scripts per month</li>
+            <li>✓ Basic hooks</li>
+            <li>✓ Basic tones</li>
+            <li>✓ Copy scripts</li>
+            <li>✓ Download TXT</li>
+          </ul>
+
+          <button class="pricing-btn">Get Started</button>
+        </div>
+
+        <div class="pricing-card pro-card">
+          <div class="pro-badge">MOST POPULAR</div>
+
+          <h3>Pro</h3>
+          <div class="price">$9.99<span>/month</span></div>
+
+          <ul>
+            <li>✓ 200 scripts per month</li>
+            <li>✓ Advanced hooks</li>
+            <li>✓ Title & CTA generator</li>
+            <li>✓ Hashtag generator</li>
+            <li>✓ Unlimited regenerate</li>
+            <li>✓ Script history</li>
+            <li>✓ B-roll suggestions</li>
+            <li>✓ All languages</li>
+          </ul>
+
+          <button class="pricing-btn pro-btn">Get Pro</button>
+        </div>
+      </div>
+    </section>
+    <div class="scroll-text">SCROLL TO EXPLORE ↓</div>
+
+    <div id="authModal" class="auth-modal">
+      <div class="auth-box">
+        <button
+          class="auth-close"
+          onclick="document.getElementById('authModal').style.display='none'"
+        >
+          ×
+        </button>
+
+        <div class="auth-logo">✦ ScriptlyAI</div>
+
+        <h2>Welcome back</h2>
+        <p>Login to continue creating amazing scripts.</p>
+
+        <input type="email" placeholder="Email address" />
+
+        <input type="password" placeholder="Password" />
+
+        <button class="auth-submit">Log in</button>
+
+        <div class="auth-switch">
+          Don't have an account?
+          <span>Sign up</span>
+        </div>
+      </div>
+    </div>
+    <div id="signupModal" class="auth-modal">
+      <div class="auth-box">
+        <button
+          class="auth-close"
+          onclick="document.getElementById('signupModal').style.display='none'"
+        >
+          ×
+        </button>
+
+        <div class="auth-logo">✦ ScriptlyAI</div>
+
+        <h2>Create account</h2>
+        <p>Start creating amazing scripts today.</p>
+
+        <input type="text" placeholder="Full name" />
+
+        <input type="email" placeholder="Email address" />
+
+        <input type="password" placeholder="Create password" />
+
+        <button class="auth-submit">Sign up</button>
+
+        <div class="auth-switch">
+          Already have an account?
+          <span>Log in</span>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
