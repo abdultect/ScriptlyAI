@@ -154,7 +154,7 @@ Return ONLY the finished script using these sections.
   fs.createReadStream(filePath).pipe(res);
 });
 
-server.listen(PORT, () => {
+server.listen(PORT, "0.0.0.0", () => {
   console.log(`ScriptlyAI running on port ${PORT}`);
 });
 console.log("SERVER FILE LOADED");
